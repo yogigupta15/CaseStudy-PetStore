@@ -38,7 +38,7 @@ create table Product_Line_Items(itemId int,
 							   categId int,
                                itemName varchar(30),
                                itemDesc varchar(1000),
-                               price decimal(5,2),
+                               price decimal(9,2),
                                primary key (itemId,prodId,categId),
                                foreign key (prodId,categId) references Category_products(prodId,categId));                  
                   
