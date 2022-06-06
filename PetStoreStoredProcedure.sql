@@ -18,8 +18,8 @@ Out success varchar(20),
 Out error_msg varchar(20)
 )
 Begin
-if(cust_id is not null or password is not null or fname is not null or lastname is not null or dob is not null or address is not null or
-contactno is not null or creditcardno is not null or cardtype is not null or exdate is not null) then
+if(cust_id is not null and password is not null and fname is not null and lastname is not null and dob is not null and address is not null and
+contactno is not null and creditcardno is not null and cardtype is not null and exdate is not null) then
 insert into CreditCard_Info(creditCardNo,cardType,expireDt) values(creditcardno,cardtype,exdate);
 insert into customer(custId,firstName,lastName,dob,address,contactNo,creditCardNo) 
 values(cust_id,fname,lastname,dob,address,contactno,creditcardno);
